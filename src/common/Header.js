@@ -15,23 +15,8 @@ import {
 import logo from "../images/logo.svg";
 import menuSvg from "../images/menu.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
-import { AnimatePresence, motion, useCycle } from "framer-motion";
 import ClassNames from "classnames";
 
-const sideVariants = {
-  closed: {
-    transition: {
-      staggerChildren: 0.2,
-      staggerDirection: -1,
-    },
-  },
-  open: {
-    transition: {
-      staggerChildren: 0.2,
-      staggerDirection: 1,
-    },
-  },
-};
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

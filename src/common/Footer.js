@@ -38,17 +38,17 @@ function Footer() {
       </div>
       <div className="footer_social">
         <div className="footer_social_inner" style={{ marginBottom: 30 }}>
-          <a href="#">
+          <a href="/#">
             <img alt="" src={linkedin} className="social_icons" />
           </a>
 
-          <a href="#">
+          <a href="/#">
             <img alt="" src={fb} className="social_icons" />
           </a>
-          <a href="#">
+          <a href="/#">
             <img alt="" src={whatsapp} className="social_icons" />
           </a>
-          <a href="#">
+          <a href="/#">
             <img alt="" src={twitter} className="social_icons" />
           </a>
         </div>

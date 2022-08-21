@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import "./App.css";
 
 import Footer from "./common/Footer";

@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const Root = styled.nav`
   background: #ffffff;
