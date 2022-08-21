@@ -34,6 +34,7 @@ const Root = styled.div`
   flex-direction: column;
   overflow: hidden;
   --margin-inline-root: 3rem;
+  --max-box-width: 80rem;
   @media (max-width: 723px) {
     --margin-inline-root: 1.3rem;
   }
@@ -46,9 +47,15 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
+  @media (max-width: 723px) {
+    margin-top: 180px;
+  }
 `;
 
 const Container = styled.div`
-  max-width: 74rem;
-  margin-inline: var(--margin-inline-root);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* max-width: 74rem; */
 `;

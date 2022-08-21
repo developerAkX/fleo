@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Root,
   StyledNavLink,
@@ -9,45 +9,70 @@ import {
   Logo,
   NavTabMenu,
   StyledLink,
+  MenuButton,
 } from "./NavBarElements";
 
 import logo from "../images/logo.svg";
+import menuSvg from "../images/menu.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
-import useSticky from "../hooks/useSticky";
-import classNames from "classnames";
+import { AnimatePresence, motion, useCycle } from "framer-motion";
+import ClassNames from "classnames";
+
+const sideVariants = {
+  closed: {
+    transition: {
+      staggerChildren: 0.2,
+      staggerDirection: -1,
+    },
+  },
+  open: {
+    transition: {
+      staggerChildren: 0.2,
+      staggerDirection: 1,
+    },
+  },
+};
 
 function Header() {
-  const isMinWidth723 = useMediaQuery("(min-width: 768px)");
-  const { sticky, stickyRef } = useSticky();
-  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMinWidth723 = useMediaQuery("(min-width: 844px)");
+
   return (
-    <Root ref={stickyRef} className={classNames({ sticky })}>
-      <NavMain>
-        <NavMenu>
-          <Logo src={logo} alt="" />
-          {isMinWidth723 && (
-            <>
-              <StyledNavLink to="/" activeStyle>
-                Home
-              </StyledNavLink>
-              <StyledNavLink to="/products" activeStyle>
-                Products
-              </StyledNavLink>
-              <StyledNavLink to="/why-us" activeStyle>
-                Why us?
-              </StyledNavLink>
-              <StyledNavLink to="/pricing" activeStyle>
-                Pricing
-              </StyledNavLink>
-            </>
-          )}
-        </NavMenu>
-        <NavBtn>
-          <StyledLink to="/sign-up">Sign In</StyledLink>
-          <NavBtnLink to="/demo">Request Demo</NavBtnLink>
-        </NavBtn>
-      </NavMain>
-      <NavTabMenu>
+    <>
+      <Root>
+        <NavMain>
+          <NavMenu>
+            <Logo src={logo} alt="" />
+            {isMinWidth723 && (
+              <>
+                <StyledNavLink to="/" activeStyle>
+                  Home
+                </StyledNavLink>
+                <StyledNavLink to="/products" activeStyle>
+                  Products
+                </StyledNavLink>
+                <StyledNavLink to="/why-us" activeStyle>
+                  Why us?
+                </StyledNavLink>
+                <StyledNavLink to="/pricing" activeStyle>
+                  Pricing
+                </StyledNavLink>
+              </>
+            )}
+          </NavMenu>
+          <NavBtn>
+            <StyledLink to="/sign-up">Sign In</StyledLink>
+            {isMinWidth723 ? (
+              <NavBtnLink to="/demo">Request Demo</NavBtnLink>
+            ) : (
+              <MenuButton onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <img src={menuSvg} alt="" />
+              </MenuButton>
+            )}
+          </NavBtn>
+        </NavMain>
+      </Root>
+      <NavTabMenu className={ClassNames({ isMenuOpen })}>
         {!isMinWidth723 && (
           <>
             <StyledNavLink to="/" activeStyle>
@@ -65,7 +90,7 @@ function Header() {
           </>
         )}
       </NavTabMenu>
-    </Root>
+    </>
   );
 }
 

@@ -10,15 +10,18 @@ export const Root = styled.nav`
   z-index: 12;
   box-shadow: 10px 10px 5px -10px rgba(206, 176, 147, 0.8);
   padding-inline: var(--margin-inline-root);
-  @media (max-width: 723px) {
+  @media (max-width: 844px) {
     flex-direction: column;
     align-items: stretch;
     padding-top: 15px;
+    padding-bottom: 15px;
     gap: 7px;
   }
   /* position: fixed; */
   left: 0;
   right: 0;
+  position: fixed;
+  z-index: 100;
 `;
 
 export const Logo = styled.img`
@@ -33,10 +36,9 @@ export const Logo = styled.img`
 export const NavMain = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 0.2rem calc((100vw - 1000px) / 6);
   z-index: 12;
   height: 70px;
-  max-width: 78rem;
+  max-width: var(--max-box-width);
   flex: 1;
 `;
 
@@ -44,6 +46,18 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   font-weight: 700;
   color: #56402a;
+`;
+
+export const MenuButton = styled.button`
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 5px 10px 1px;
+  margin-left: 10px;
+  cursor: pointer;
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -75,31 +89,46 @@ export const NavMenu = styled.div`
 
 export const NavTabMenu = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
+
   white-space: nowrap;
-  height: 50px;
-  padding-bottom: 10px;
+  /* height: 50px; */
+  padding: 25px 15px;
+  width: 120px;
   justify-content: space-between;
   /* @media screen and (max-width: 768px) {
     display: none;
   } */
+  position: fixed;
+  top: 75px;
+  right: 5px;
+  background: #fff;
+  box-shadow: 10px 10px 5px -10px rgba(206, 176, 147, 0.8),
+    10px -10px 5px -10px rgba(206, 176, 147, 0.8);
+  z-index: 50;
+  transform: translateY(-225px);
+  transition: 0.4s ease-in-out;
+  &.isMenuOpen {
+    transform: translateY(0px);
+  }
+  @media (min-width: 844px) {
+    display: none;
+  }
 `;
 
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-  /* margin-right: 24px; */
-  /* Third Nav */
-  /* justify-content: flex-end;
-width: 100vw; */
-  /* @media screen and (max-width: 768px) {
-    display: none;
-  } */
   white-space: nowrap;
 `;
 
 export const NavBtnLink = styled(NavLink)`
-  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
   background: #df581e;
   padding: 10px 22px;
   color: #fff;
