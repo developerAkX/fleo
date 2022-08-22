@@ -34,6 +34,11 @@ function Section1() {
           <img alt="" src={logo3} className="client_logo" />
           <img alt="" src={logo4} className="client_logo" />
           <img alt="" src={logo5} className="client_logo hidable" />
+          <img alt="" src={logo1} className="client_logo" />
+          <img alt="" src={logo2} className="client_logo" />
+          <img alt="" src={logo3} className="client_logo" />
+          <img alt="" src={logo4} className="client_logo" />
+          <img alt="" src={logo5} className="client_logo hidable" />
         </main>
       </PartnersMain>
       <StyledButtonLink className="forMobile" to="/demo">
@@ -48,9 +53,10 @@ export default Section1;
 const Root = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: var(--max-box-width - 20px);
+  /* max-width: var(--max-box-width - 20px); */
   padding-inline: var(--margin-inline-root);
   overflow: hidden;
+  width: calc(100%);
 `;
 
 const StyledButtonLink = styled(NavBtnLink)`
@@ -74,24 +80,34 @@ const StyledButtonLink = styled(NavBtnLink)`
 
 const PartnersMain = styled.div`
   background-color: #ffffff;
-  align-items: center;
-  display: flex;
   gap: 10px;
   height: 90px;
-  width: 100%;
-  justify-content: space-evenly;
+  width: calc(100vw - 20px);
+  overflow: hidden;
   main {
     align-items: center;
     display: flex;
     gap: 10px;
     height: 90px;
-    width: 90vw;
     justify-content: space-evenly;
+    display: inline-flex;
+    animation: scrolling-left1 20s linear infinite;
   }
+
+  @keyframes scrolling-left1 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
   .client_logo {
     height: 40px;
     width: auto;
     object-fit: contain;
+    margin-right: 40px;
   }
   @media (max-width: 900px) {
     justify-content: space-evenly;
@@ -123,10 +139,13 @@ const PartnersMain = styled.div`
     .client_logo {
       height: 19px;
     }
+    width: calc(100vw);
   }
 `;
 
 const Main = styled.div`
+  max-width: var(--max-box-width);
+  align-self: center;
   display: flex;
   justify-content: space-between;
   text-align: left;

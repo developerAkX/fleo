@@ -3,7 +3,7 @@ import React from "react";
 
 function FeatureBox({ item }) {
   return (
-    <Root style={{ top: 100 + item.top, transform: `scale(${item.scale})` }}>
+    <Root style={{ top: 400 + item.top, transform: `scale(${item.scale})` }}>
       <RootInner>
         <Image alt="image" src={item.image} />
         <TextSection>
@@ -23,7 +23,7 @@ const Root = styled.div`
 `;
 
 const RootInner = styled.div`
-  box-shadow: 5px -5px 10px #0000001c, 5px 15px 10px #0000001c;
+  box-shadow: 5px -15px 10px #0000001c, 5px 15px 10px #0000001c;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;

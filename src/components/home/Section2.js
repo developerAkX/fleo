@@ -50,8 +50,6 @@ const Image = styled.img`
     padding-block: 50px;
     width: 80%;
   }
-  @media (max-width: 430px) {
-  }
 `;
 
 const TextSection = styled.div`

@@ -11,7 +11,7 @@ function Section4() {
   const list = [
     {
       top: 0,
-      scale: 0.91,
+      scale: 0.94,
       image: feature1,
       title: "Take faster and impactful decision using Fleo",
       description:
@@ -19,7 +19,7 @@ function Section4() {
     },
     {
       top: 20,
-      scale: 0.93,
+      scale: 0.96,
       image: feature2,
       title: "Conduct regular internal business reviews with ease",
       description:
@@ -27,7 +27,7 @@ function Section4() {
     },
     {
       top: 40,
-      scale: 0.95,
+      scale: 0.98,
       image: feature3,
       title: "Take faster and impactful decision using Fleo",
       description:
@@ -35,7 +35,7 @@ function Section4() {
     },
     {
       top: 60,
-      scale: 0.97,
+      scale: 1,
       image: feature4,
       title: "Check your bandwitdh and make every second count",
       description:
@@ -114,8 +114,14 @@ const TextSection = styled.div`
   align-self: center;
   align-items: center;
   font-size: 16px;
-  width: 90%;
+  width: 100%;
+  padding-inline: 10px;
+  padding-block: 20px;
+  position: sticky;
+  top: 60px;
+  background: #fffaf4;
 
+  z-index: 1;
   h4 {
     font-style: normal;
     font-weight: 700;
