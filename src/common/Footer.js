@@ -10,34 +10,17 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <Root className="footer_main">
-      <div className="footer_address">
-        <span className="footer_text">
-          Email: <b>hello@fleo.io</b>
-        </span>
-        <br />
-        <span className="footer_text">
-          Phone: <b>+91 87654 44000</b>
-        </span>
-        <br />
-        <span className="footer_text">
-          Address:{" "}
-          <b>
-            No. 1207/343, 9th Main, Sector 7, HSR Layout, Bengaluru, Karnataka -
-            560102
-          </b>
-        </span>
+      <img alt="" src={whitelogo} />
+
+      <div className="linkContainer">
+        <Link to="/">About Us</Link>
+        <Link to="/">Privacy policy</Link>
+        <Link to="/">Terms and conditions</Link>
+        <Link to="/">Contact Us</Link>
       </div>
-      <div className="logoContainer">
-        <img alt="" src={whitelogo} />
-        <div className="linkContainer">
-          <Link to="/">About Us</Link>
-          <Link to="/">Privacy policy</Link>
-          <Link to="/">Terms and conditions</Link>
-          <Link to="/">Contact Us</Link>
-        </div>
-      </div>
+
       <div className="footer_social">
-        <div className="footer_social_inner" style={{ marginBottom: 30 }}>
+        <div className="footer_social_inner">
           <a href="/#">
             <img alt="" src={linkedin} className="social_icons" />
           </a>
@@ -52,21 +35,20 @@ function Footer() {
             <img alt="" src={twitter} className="social_icons" />
           </a>
         </div>
-        <span className="footer_quote">
-          Fleo shows you the areas that need your attention, it will be your
-          go-to tool for internal business reviews
-        </span>
       </div>
     </Root>
   );
 }
 
 const Root = styled.div`
-  height: 444px;
+  /* height: 444px; */
   background: #56402a;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 50px;
+  padding-top: 60px;
+  padding-bottom: 40px;
   color: #fff;
   max-width: var(--max-box-width);
   padding-inline: var(--margin-inline-root);
@@ -75,26 +57,15 @@ const Root = styled.div`
     max-width: 100%;
   }
 
-  .logoContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
-    img {
-      align-self: center;
-      max-width: 158px;
-    }
-  }
   .linkContainer {
     display: flex;
-    flex-direction: row;
     flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     gap: 20px;
     a {
       text-decoration: none;
       color: #fff;
-
       font-weight: 400;
       font-size: 16px;
       text-align: center;
@@ -102,21 +73,6 @@ const Root = styled.div`
     }
   }
 
-  .footer_text {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 32px;
-  }
-  .footer_quote {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-  }
-  .footer_address {
-    flex: 0.3;
-    text-align: left;
-    min-width: 25%;
-  }
   .footer_social {
     display: flex;
     flex-direction: column;
@@ -124,11 +80,13 @@ const Root = styled.div`
     text-align: center;
     width: 28%;
   }
+
   .footer_social_inner {
     display: flex;
     align-items: center;
     gap: 20px;
   }
+
   .footer_main {
     height: 444px;
     padding: 20px;
@@ -136,7 +94,8 @@ const Root = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-  @media (max-width: 940px) {
+
+  @media (max-width: 1090px) {
     flex-direction: column;
     .footer_address {
       display: none;
@@ -147,9 +106,8 @@ const Root = styled.div`
 
     padding-top: 50px;
 
-    .logoContainer {
-      justify-content: space-between;
-      gap: 70px;
+    .linkContainer {
+      flex-direction: column;
     }
   }
 `;
