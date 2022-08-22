@@ -62,7 +62,6 @@ const TextSection = styled.div`
   width: 90%;
 
   h3 {
-    font-family: "Mulish";
     font-style: normal;
     font-weight: 700;
     font-size: 3.125em;
@@ -75,7 +74,7 @@ const TextSection = styled.div`
   p {
     margin: 0;
     margin-top: 10px;
-    font-family: "Mulish";
+
     font-weight: 400;
     font-size: 1.45em;
     /* letter-spacing: 0.1px; */

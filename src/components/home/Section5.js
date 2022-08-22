@@ -36,12 +36,12 @@ const Root = styled.div`
   align-items: stretch;
   width: 100%;
   background: #fff;
-  padding: var(--margin-inline-root);
+  padding-block: 20px;
 `;
 
 const Image = styled.img`
   max-width: var(--max-box-width);
-  width: 90vw;
+  width: 80vw;
   @media (max-width: 893px) {
     width: 80vw;
   }
@@ -56,7 +56,6 @@ const TextSection = styled.div`
 
 const Title = styled.div`
   strong {
-    font-family: "Mulish";
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -66,7 +65,6 @@ const Title = styled.div`
 `;
 
 const Description = styled.div`
-  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;

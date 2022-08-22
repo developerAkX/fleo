@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled from "@emotion/styled";
-import "./App.css";
 
 import Footer from "./common/Footer";
 import Header from "./common/Header";
@@ -32,7 +31,7 @@ export default App;
 const Root = styled.div`
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  /* overflow: hidden; */
   --margin-inline-root: 3rem;
   --max-box-width: 80rem;
   @media (max-width: 723px) {

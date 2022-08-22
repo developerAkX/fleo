@@ -12,7 +12,7 @@ export const Button = styled.button`
   box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25);
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  font-family: "Mulish", sans-serif;
+
   /* Second Nav */
   &:hover {
     transition: all 0.2s ease-in-out;

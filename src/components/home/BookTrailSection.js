@@ -60,7 +60,6 @@ const Root = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;

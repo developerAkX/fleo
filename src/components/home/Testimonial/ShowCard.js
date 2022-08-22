@@ -25,6 +25,8 @@ const Root = styled.div`
   display: flex;
   gap: 10px;
   width: 90vw;
+  cursor: pointer;
+  user-select: none;
   @media (max-width: 835px) {
     max-width: 90vw;
   }
@@ -223,7 +225,7 @@ const TextSection = styled.div`
       font-size: 14px;
     }
     .position {
-        margin-top: 5px;
+      margin-top: 5px;
     }
   }
 `;

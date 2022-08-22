@@ -48,8 +48,9 @@ export default Section1;
 const Root = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: var(--max-box-width);
-  margin-inline: var(--margin-inline-root);
+  max-width: var(--max-box-width - 20px);
+  padding-inline: var(--margin-inline-root);
+  overflow: hidden;
 `;
 
 const StyledButtonLink = styled(NavBtnLink)`
@@ -133,7 +134,6 @@ const Main = styled.div`
   margin-top: 80px;
   align-items: center;
   gap: 40px;
-
   @media (max-width: 1116px) {
     margin-top: 10px;
     text-align: center;
@@ -171,7 +171,6 @@ const TextSection = styled.div`
   font-size: 16px;
   margin-right: 50px;
   h2 {
-    font-family: "Mulish";
     font-weight: 800;
     font-size: 3.125em;
     color: #56402a;
@@ -187,7 +186,7 @@ const TextSection = styled.div`
   strong {
     display: flex;
     flex-direction: row-reverse;
-    font-family: "Mulish";
+
     font-weight: 600;
     font-size: 1.5em;
     line-height: 1.7;
@@ -230,7 +229,7 @@ const TextSection = styled.div`
   @media (max-width: 619px) {
     font-size: 12px;
   }
-  @media (max-width: 532px) {
+  @media (max-width: 536px) {
     font-size: 11px;
     margin-right: 0;
     margin-left: 0;
@@ -243,6 +242,7 @@ const TextSection = styled.div`
       width: 95vw;
       padding-inline: 16px;
     }
+    max-width: 80vw;
   }
   @media (max-width: 469px) {
     h2 {

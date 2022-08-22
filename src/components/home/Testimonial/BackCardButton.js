@@ -20,6 +20,8 @@ const Root = styled.div`
   @media (max-width: 835px) {
     display: none;
   }
+  cursor: pointer;
+  user-select: none;
 `;
 
 const Image = styled.img`

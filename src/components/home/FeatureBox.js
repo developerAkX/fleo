@@ -3,19 +3,27 @@ import React from "react";
 
 function FeatureBox({ item }) {
   return (
-    <Root>
-      <Image alt="image" src={item.image} />
-      <TextSection>
-        <Title>
-          <strong>{item.title}</strong>
-        </Title>
-        <Description>{item.description}</Description>
-      </TextSection>
+    <Root style={{ top: 100 + item.top, transform: `scale(${item.scale})` }}>
+      <RootInner>
+        <Image alt="image" src={item.image} />
+        <TextSection>
+          <Title>
+            <strong>{item.title}</strong>
+          </Title>
+          <Description>{item.description}</Description>
+        </TextSection>
+      </RootInner>
     </Root>
   );
 }
 
 const Root = styled.div`
+  position: sticky;
+  top: 90px;
+`;
+
+const RootInner = styled.div`
+  box-shadow: 5px -5px 10px #0000001c, 5px 15px 10px #0000001c;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -28,7 +36,6 @@ const Root = styled.div`
 
   margin: 20px;
   background-color: #ffffff;
-  /* padding-top: 100; */
   @media (max-width: 600px) {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
     display: flex;

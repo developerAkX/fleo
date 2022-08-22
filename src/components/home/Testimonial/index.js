@@ -206,7 +206,6 @@ const Main = styled.div`
 `;
 
 const Title = styled.div`
-  font-family: "Mulish";
   font-weight: 700;
   font-size: 50px;
   color: #56402a;
@@ -226,6 +225,8 @@ export const ShowBarContainer = styled.div`
   display: flex;
   gap: 20px;
   align-self: center;
+  cursor: pointer;
+  user-select: none;
 `;
 export const ShowBar = styled(motion.div)`
   display: flex;

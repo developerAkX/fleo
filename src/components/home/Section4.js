@@ -10,24 +10,32 @@ import styled from "@emotion/styled";
 function Section4() {
   const list = [
     {
+      top: 0,
+      scale: 0.91,
       image: feature1,
       title: "Take faster and impactful decision using Fleo",
       description:
         "Fleo  shows you the areas that need your attention, it will be your go- to tool for internal business reviews.",
     },
     {
+      top: 20,
+      scale: 0.93,
       image: feature2,
       title: "Conduct regular internal business reviews with ease",
       description:
         "Fleo  shows you the areas that need your attention, it will be your go- to tool for internal business reviews.",
     },
     {
+      top: 40,
+      scale: 0.95,
       image: feature3,
       title: "Take faster and impactful decision using Fleo",
       description:
         "Fleo  shows you the areas that need your attention, it will be your go- to tool for internal business reviews.",
     },
     {
+      top: 60,
+      scale: 0.97,
       image: feature4,
       title: "Check your bandwitdh and make every second count",
       description:
@@ -51,7 +59,7 @@ function Section4() {
         <main>
           {list &&
             list.map((i, index) => {
-              return <FeatureBox item={i} key={index} />;
+              return <FeatureBox key={index} item={i} />;
             })}
         </main>
       </Main>
@@ -75,6 +83,7 @@ const Main = styled.div`
   background-size: cover;
   position: relative;
   flex: 1;
+  padding-bottom: 50px;
   .brownBox {
     position: absolute;
     background: #56402a;
@@ -86,15 +95,16 @@ const Main = styled.div`
     z-index: -1;
   }
   @media (min-width: 1232px) {
-    width: 100vw;
+    width: calc(100vw - 20px);
   }
   main {
-    width: 100vw;
+    width: calc(100vw - 20px);
     display: flex;
     align-items: center;
     align-self: center;
     flex-direction: column;
     max-width: var(--max-box-width);
+    position: relative;
   }
 `;
 
@@ -107,7 +117,6 @@ const TextSection = styled.div`
   width: 90%;
 
   h4 {
-    font-family: "Mulish";
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -118,7 +127,6 @@ const TextSection = styled.div`
   }
 
   p {
-    font-family: "Mulish";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;

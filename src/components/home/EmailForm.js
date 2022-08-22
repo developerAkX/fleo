@@ -71,13 +71,14 @@ const ErrorMessage = styled.div`
 
 const InputField = styled.input`
   flex: 0.8;
-  font-family: "Mulish", sans-serif;
+
   border-radius: 8px;
   border: 1px solid #000;
   height: 60px;
   padding-left: 20px;
   font-size: 24px;
   flex: 1;
+  margin-right: -15px;
   @media (max-width: 721px) {
     font-size: 20px;
     height: 50px;
@@ -96,7 +97,6 @@ const InputField = styled.input`
     padding-left: 10px;
   }
   &::placeholder {
-    font-family: "Mulish";
     font-style: normal;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.25);

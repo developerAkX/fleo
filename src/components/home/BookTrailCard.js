@@ -38,7 +38,6 @@ const Main = styled.div`
   margin-left: 20px;
   flex: 1;
   strong {
-    font-family: "Mulish";
     font-style: normal;
     font-weight: 500;
     font-size: 21px;
@@ -46,7 +45,6 @@ const Main = styled.div`
     white-space: nowrap;
   }
   small {
-    font-family: "Mulish";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

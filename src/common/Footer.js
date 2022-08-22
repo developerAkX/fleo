@@ -94,7 +94,7 @@ const Root = styled.div`
     a {
       text-decoration: none;
       color: #fff;
-      font-family: "Mulish";
+
       font-weight: 400;
       font-size: 16px;
       text-align: center;
