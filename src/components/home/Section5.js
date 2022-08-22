@@ -37,6 +37,7 @@ const Root = styled.div`
   width: 100%;
   background: #fff;
   padding-block: 20px;
+  padding-bottom: 60px;
 `;
 
 const Image = styled.img`
