@@ -10,6 +10,7 @@ import ShowCard from "./ShowCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import useWindowSize from "../../../hooks/useWindowResize";
+import { TestimonialSection } from "../../../config.data";
 
 const variants = {
   enter: (direction) => {
@@ -42,7 +43,7 @@ const Testimonial = () => {
   const size = useWindowSize();
   const [buttonHeight, setButtonHeight] = useState();
   const [buttonWidth, setButtonWidth] = useState();
-  const messages = list;
+  const messages = TestimonialSection.list;
   const [[page, direction], setPage] = useState([0, 0]);
   const msgIndex = wrap(0, messages.length, page);
 
@@ -62,7 +63,7 @@ const Testimonial = () => {
     <Root>
       <Body>
         <Title>
-          <h4>Client Testimonial</h4>
+          <h4>{TestimonialSection.title}</h4>
         </Title>
         <Main button_height={buttonHeight} button_width={buttonWidth}>
           <BackCardButton

@@ -1,63 +1,22 @@
 import React from "react";
 import FeatureBox from "./FeatureBox";
-import feature1 from "../../images/feature-1.png";
-import feature2 from "../../images/feature-2.png";
-import feature3 from "../../images/feature-3.png";
-import feature4 from "../../images/feature-4.png";
 import backSvg from "../../images/back-bron.svg";
 import styled from "@emotion/styled";
+import { InformationSection } from "../../config.data";
 
 function Section4() {
-  const list = [
-    {
-      top: 0,
-      scale: 0.94,
-      image: feature1,
-      title: "Take faster and impactful decision using Fleo",
-      description:
-        "Fleo  shows you the areas that need your attention, it will be your go- to tool for internal business reviews.",
-    },
-    {
-      top: 20,
-      scale: 0.96,
-      image: feature2,
-      title: "Conduct regular internal business reviews with ease",
-      description:
-        "Fleo  shows you the areas that need your attention, it will be your go- to tool for internal business reviews.",
-    },
-    {
-      top: 40,
-      scale: 0.98,
-      image: feature3,
-      title: "Take faster and impactful decision using Fleo",
-      description:
-        "Fleo  shows you the areas that need your attention, it will be your go- to tool for internal business reviews.",
-    },
-    {
-      top: 60,
-      scale: 1,
-      image: feature4,
-      title: "Check your bandwitdh and make every second count",
-      description:
-        "Fleo  shows you the areas that need your attention, it will be your go- to tool for internal business reviews.",
-    },
-  ];
   return (
     <Root>
       <TextSection>
-        <h4>Know the performance pulse to take better decisions</h4>
-        <p>
-          Fleo shows you the areas that need your attention and winners who
-          should be appreciated
-        </p>
+        <h4>{InformationSection.title}</h4>
+        <p>{InformationSection.description}</p>
       </TextSection>
       <Main>
         <div className="brownBox" />
         <main>
-          {list &&
-            list.map((i, index) => {
-              return <FeatureBox key={index} item={i} />;
-            })}
+          {InformationSection.list.map((i, index) => {
+            return <FeatureBox key={index} item={i} />;
+          })}
         </main>
       </Main>
     </Root>
@@ -165,7 +124,6 @@ const TextSection = styled.div`
     font-size: 11px;
   }
 
-   
   @media (max-width: 469px) {
     h4 {
       font-size: 2.95em;

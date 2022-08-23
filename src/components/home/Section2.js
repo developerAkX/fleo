@@ -1,22 +1,18 @@
 import React from "react";
 import styled from "@emotion/styled";
 import image from "../../images/section_2_ilstr.png";
+import { PlanningSection } from "../../config.data";
 
 function Section2() {
   return (
     <Root>
       <Image src={image} />
       <TextSection>
-        <h2 className="hidable-h3">Plan Better</h2>
-        <h2>Do Better</h2>
+        <h2 className="hidable-h3">{PlanningSection.title1}</h2>
+        <h2>{PlanningSection.title2}</h2>
         <p>
-          Spend sometime planning the success map{" "}
-          <span className="hidable">
-            Lorem ipsum dolor sit amet, consctetur adipisc ing elit. Lorem ipsum
-            dolor sit. Lorem ipsum dolLorem ipsum dolor sit amet,
-            consectetur.Lorem ipsum dolor sit amet, sit amet, consectetur.Lorem
-            ipsum dolor sit amet,
-          </span>
+          {PlanningSection.description}{" "}
+          <span className="hidable">{PlanningSection.hidableDescription}</span>
         </p>
       </TextSection>
     </Root>
@@ -115,7 +111,7 @@ const TextSection = styled.div`
   @media (max-width: 532px) {
     font-size: 11px;
   }
-  
+
   @media (max-width: 469px) {
     h2 {
       font-size: 2.95em;

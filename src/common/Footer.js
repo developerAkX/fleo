@@ -78,7 +78,6 @@ const Root = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 28%;
   }
 
   .footer_social_inner {

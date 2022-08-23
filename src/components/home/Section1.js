@@ -1,12 +1,8 @@
 import React from "react";
 import image from "../../images/Header_Illustration.png";
-import logo1 from "../../images/arrivae.svg";
-import logo2 from "../../images/jobs.svg";
-import logo3 from "../../images/bizom.svg";
-import logo4 from "../../images/phable.svg";
-import logo5 from "../../images/safex.svg";
 import styled from "@emotion/styled";
 import { NavBtnLink } from "../../common/NavBarElements";
+import { BrandsSection, Landing } from "../../config.data";
 
 function Section1() {
   return (
@@ -14,12 +10,11 @@ function Section1() {
       <Root>
         <Main>
           <TextSection>
-            <h2>Create high performance</h2>
-            <h2>culture with OKRs</h2>
+            <h2>{Landing.title1}</h2>
+            <h2>{Landing.title2}</h2>
 
             <strong>
-              Use Fleo to make goals effective and gets teams focused on company
-              growth
+              {Landing.description}
               <span className="showBar" />
             </strong>
             <StyledButtonLink to="/demo">Request Demo</StyledButtonLink>
@@ -29,16 +24,12 @@ function Section1() {
       </Root>
       <PartnersMain>
         <main>
-          <img alt="" src={logo1} className="client_logo" />
-          <img alt="" src={logo2} className="client_logo" />
-          <img alt="" src={logo3} className="client_logo" />
-          <img alt="" src={logo4} className="client_logo" />
-          <img alt="" src={logo5} className="client_logo hidable" />
-          <img alt="" src={logo1} className="client_logo" />
-          <img alt="" src={logo2} className="client_logo" />
-          <img alt="" src={logo3} className="client_logo" />
-          <img alt="" src={logo4} className="client_logo" />
-          <img alt="" src={logo5} className="client_logo hidable" />
+          {BrandsSection.map((logo) => (
+            <img alt="" src={logo} className="client_logo" />
+          ))}
+          {BrandsSection.map((logo) => (
+            <img alt="" src={logo} className="client_logo" />
+          ))}
         </main>
       </PartnersMain>
       <StyledButtonLink className="forMobile" to="/demo">
@@ -81,9 +72,11 @@ const StyledButtonLink = styled(NavBtnLink)`
 const PartnersMain = styled.div`
   background-color: #ffffff;
   gap: 10px;
-  height: 90px;
+  height: 100px;
   width: calc(100vw - 20px);
   overflow: hidden;
+  align-items: center;
+  display: flex;
   main {
     align-items: center;
     display: flex;

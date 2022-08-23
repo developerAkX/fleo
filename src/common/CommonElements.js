@@ -15,7 +15,6 @@ export const Button = styled.button`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 
-  /* Second Nav */
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;

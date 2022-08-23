@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { IntegrationSection } from "../../config.data";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import img from "../../images/integration.svg";
 import imgMobile from "../../images/integrationMobile.svg";
@@ -10,12 +11,9 @@ function Section5() {
     <Root>
       <TextSection>
         <Title>
-          <h4>Integration</h4>
+          <h4>{IntegrationSection.title}</h4>
         </Title>
-        <Description>
-          Fleo captures everyone’s involvement and helps with uniform
-          distribution of work.
-        </Description>
+        <Description>{IntegrationSection.description}</Description>
       </TextSection>
       {isMinWidth780 ? <Image src={img} /> : <Image src={imgMobile} />}
     </Root>
@@ -87,7 +85,6 @@ const Title = styled.div`
   }
   @media (max-width: 426px) {
     font-size: 10.8px;
-
   }
   @media (max-width: 400px) {
     font-size: 10.2px;

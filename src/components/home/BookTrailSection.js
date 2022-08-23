@@ -9,15 +9,16 @@ import okrsList from "../../images/okrs_list.png";
 import BookTrailCard from "./BookTrailCard";
 import EmailForm from "./EmailForm";
 import styled from "@emotion/styled";
+import { TrialSection } from "../../config.data";
 
 const BookTrailSection = () => {
   return (
     <Root>
-      <Title>Book 30 day FREE trial</Title>
+      <Title>{TrialSection.title}</Title>
       <EmailForm />
       <Main>
         <BookTrailList>
-          {list1?.map((i, index) => (
+          {TrialSection.list1.map((i, index) => (
             <BookTrailCard
               icon={i.icon}
               title={i.title}
@@ -31,7 +32,7 @@ const BookTrailSection = () => {
         </ImageContainer>
 
         <BookTrailList>
-          {list2?.map((i, index) => (
+          {TrialSection.list2.map((i, index) => (
             <BookTrailCard
               icon={i.icon}
               title={i.title}
