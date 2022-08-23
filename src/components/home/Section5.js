@@ -10,7 +10,7 @@ function Section5() {
     <Root>
       <TextSection>
         <Title>
-          <strong>Integration</strong>
+          <h4>Integration</h4>
         </Title>
         <Description>
           Fleo captures everyone’s involvement and helps with uniform
@@ -56,13 +56,42 @@ const TextSection = styled.div`
 `;
 
 const Title = styled.div`
-  strong {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  h4 {
+    font-weight: 800;
+    font-size: 3.125em;
     color: #56402a;
+    white-space: nowrap;
+    line-height: 1.6;
+    margin: 0;
   }
-  margin-bottom: 15px;
+  align-items: center;
+
+  @media (max-width: 1490px) {
+    font-size: 14px;
+  }
+  @media (max-width: 619px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 536px) {
+    font-size: 11px;
+  }
+
+  @media (max-width: 469px) {
+    h4 {
+      font-size: 2.95em;
+    }
+  }
+  @media (max-width: 426px) {
+    font-size: 10.8px;
+
+  }
+  @media (max-width: 400px) {
+    font-size: 10.2px;
+  }
 `;
 
 const Description = styled.div`

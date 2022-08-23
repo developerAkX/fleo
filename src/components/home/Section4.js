@@ -45,13 +45,10 @@ function Section4() {
   return (
     <Root>
       <TextSection>
-        <h4>
-          <span>Know the performance pulse to take</span>
-          <span>better decisions</span>
-        </h4>
+        <h4>Know the performance pulse to take better decisions</h4>
         <p>
-          <span>Fleo shows you the areas that need your attention</span>
-          <span>and winners who should be appreciated</span>
+          Fleo shows you the areas that need your attention and winners who
+          should be appreciated
         </p>
       </TextSection>
       <Main>
@@ -116,16 +113,12 @@ const TextSection = styled.div`
   font-size: 16px;
   width: 100%;
   padding-inline: 10px;
-  padding-block: 20px;
-  position: sticky;
-  top: 60px;
-  background: #fffaf4;
+  padding-bottom: 20px;
 
-  z-index: 1;
   h4 {
     font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
+    font-weight: 800;
+    font-size: 3.125em;
     line-height: 1.4;
     text-align: center;
     color: #56402a;
@@ -170,6 +163,13 @@ const TextSection = styled.div`
 
   @media (max-width: 532px) {
     font-size: 11px;
+  }
+
+   
+  @media (max-width: 469px) {
+    h4 {
+      font-size: 2.95em;
+    }
   }
 
   @media (max-width: 400px) {

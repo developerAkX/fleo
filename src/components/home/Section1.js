@@ -210,8 +210,6 @@ const TextSection = styled.div`
     font-size: 1.5em;
     line-height: 1.7;
     color: #000000;
-    /* padding-left: 30px; */
-    /* border-left: 4px solid #395fe2; */
     margin-top: 20px;
     .showBar {
       display: block;
@@ -235,7 +233,6 @@ const TextSection = styled.div`
   @media (max-width: 1116px) {
     margin-right: 0px;
     max-width: 30rem;
-    /* margin-top: 4rem; */
   }
 
   @media (max-width: 1490px) {
@@ -263,9 +260,10 @@ const TextSection = styled.div`
     }
     max-width: 80vw;
   }
+
   @media (max-width: 469px) {
     h2 {
-      font-size: 2.85em;
+      font-size: 2.95em;
     }
   }
   @media (max-width: 426px) {

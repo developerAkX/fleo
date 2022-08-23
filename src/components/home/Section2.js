@@ -7,8 +7,8 @@ function Section2() {
     <Root>
       <Image src={image} />
       <TextSection>
-        <h3 className="hidable-h3">Plan Better</h3>
-        <h3>Do Better</h3>
+        <h2 className="hidable-h3">Plan Better</h2>
+        <h2>Do Better</h2>
         <p>
           Spend sometime planning the success map{" "}
           <span className="hidable">
@@ -59,9 +59,9 @@ const TextSection = styled.div`
   font-size: 16px;
   width: 90%;
 
-  h3 {
+  h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 3.125em;
     line-height: 1.3;
     margin: 0;
@@ -114,6 +114,12 @@ const TextSection = styled.div`
 
   @media (max-width: 532px) {
     font-size: 11px;
+  }
+  
+  @media (max-width: 469px) {
+    h2 {
+      font-size: 2.95em;
+    }
   }
 
   @media (max-width: 400px) {

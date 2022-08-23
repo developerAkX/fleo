@@ -61,7 +61,9 @@ const Testimonial = () => {
   return (
     <Root>
       <Body>
-        <Title>Client Testimonial</Title>
+        <Title>
+          <h4>Client Testimonial</h4>
+        </Title>
         <Main button_height={buttonHeight} button_width={buttonWidth}>
           <BackCardButton
             item={
@@ -206,18 +208,40 @@ const Main = styled.div`
 `;
 
 const Title = styled.div`
-  font-weight: 700;
-  font-size: 50px;
-  color: #56402a;
-  @media (max-width: 493px) {
-    font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  h4 {
+    font-weight: 800;
+    font-size: 3.125em;
+    color: #56402a;
+    white-space: nowrap;
+    line-height: 1.6;
+    margin: 0;
   }
-  @media (max-width: 477px) {
-    gap: 10px;
+  align-items: center;
+
+  @media (max-width: 1490px) {
+    font-size: 14px;
   }
-  @media (max-width: 724px) {
-    margin-inline: var(--margin-inline-root);
-    text-align: center;
+  @media (max-width: 619px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 536px) {
+    font-size: 11px;
+  }
+
+  @media (max-width: 469px) {
+    h4 {
+      font-size: 2.95em;
+    }
+  }
+  @media (max-width: 426px) {
+    font-size: 10.8px;
+  }
+  @media (max-width: 400px) {
+    font-size: 10.2px;
   }
 `;
 
