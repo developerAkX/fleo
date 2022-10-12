@@ -1,5 +1,6 @@
 import React from "react";
-import image from "../../images/Header_Illustration.png";
+// import image from "../../images/ill.svg";
+import image from "../../images/ill2.png";
 import styled from "@emotion/styled";
 import { NavBtnLink } from "../../common/NavBarElements";
 import { BrandsSection, Landing } from "../../config.data";
@@ -130,9 +131,9 @@ const PartnersMain = styled.div`
 
   @media (max-width: 432px) {
     .client_logo {
-      height: 19px;
+      height: 24px;
     }
-    width: calc(100vw);
+    width: calc(108vw);
   }
 `;
 
